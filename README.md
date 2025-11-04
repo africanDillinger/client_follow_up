@@ -51,11 +51,11 @@ Aggregate statistics for program monitoring.
 
 Backend:
 
-PHP (Laravel) or Python (Django/Flask) – handles database and logic.
+Python Flask) – handles database and logic.
 
 Database:
 
-MySQL or PostgreSQL – to store client and follow-up info.
+MySQL - to store client and follow-up info.
 
 Frontend:
 
