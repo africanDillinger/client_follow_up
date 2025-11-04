@@ -43,3 +43,22 @@ e) Reporting
 Export data as CSV/PDF.
 
 Aggregate statistics for program monitoring.
+
+
+
+
+2. Suggested Tech Stack
+
+Backend:
+
+PHP (Laravel) or Python (Django/Flask) – handles database and logic.
+
+Database:
+
+MySQL or PostgreSQL – to store client and follow-up info.
+
+Frontend:
+
+HTML/CSS/JS with TailwindCSS for a modern UI.
+
+Optional: React.js for interactive dashboards.
