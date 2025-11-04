@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "base.html" %}
+{% block content %}
+<div class="bg-white p-6 rounded shadow">
+  <h2 class="text-lg font-semibold mb-4">Clients & Follow-ups</h2>
+  <div class="overflow-x-auto">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-4 py-2 text-left">Name</th>
+          <th class="px-4 py-2 text-left">Phone</th>
+          <th class="px-4 py-2 text-left">Circ Date</th>
+          <th class="px-4 py-2 text-left">Clinic</th>
+          <th class="px-4 py-2 text-left">Follow-up Date</th>
+          <th class="px-4 py-2 text-left">Status</th>
+          <th class="px-4 py-2 text-left">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-100">
+        {% for fu in followups %}
+        <tr>
+          <td class="px-4 py-2">{{ fu.client.name }}</td>
+          <td class="px-4 py-2">{{ fu.client.phone or '-' }}</td>
+          <td class="px-4 py-2">{{ fu.client.circumcision_date }}</td>
+          <td class="px-4 py-2">{{ fu.client.clinic or '-' }}</td>
+          <td class="px-4 py-2">{{ fu.followup_date }}</td>
+          <td class="px-4 py-2">{{ fu.status }}</td>
+          <td class="px-4 py-2">
+            {% if fu.status == 'pending' %}
+              <a href="/followup/{{ fu.id }}/complete" class="px-2 py-1 bg-green-600 text-white rounded">Mark Complete</a>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

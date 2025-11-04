@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Follow-up System</title>
+  <!-- Tailwind Play CDN for prototype -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <nav class="bg-white shadow p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="text-xl font-semibold">Circumcision Follow-up</div>
+      <div class="flex gap-3">
+        <a href="/" class="px-3 py-1 rounded hover:bg-gray-100">Dashboard</a>
+        <a href="/register" class="px-3 py-1 rounded hover:bg-gray-100">Register Client</a>
+        <a href="/clients" class="px-3 py-1 rounded hover:bg-gray-100">Clients</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container mx-auto mt-6">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
